@@ -55,6 +55,9 @@ def main_function():
                         data.save()
                         vk_bot.messages.send(peer_id=event.object.peer_id, keyboard=keyboard.keyboard_help(), message=MESSAGE["settings_msg"],
                                              random_id=0)
+                    elif text == MESSAGE_KEYBOARD['start_keyb_info']:
+                        vk_bot.messages.send(peer_id=event.object.peer_id, keyboard=keyboard.keyboard_menu(), message=MESSAGE["info_msg"],
+                                             random_id=0)
                     elif text == MESSAGE_KEYBOARD['menu_keyb']:
                         vk_bot.messages.send(peer_id=event.object.peer_id, keyboard=keyboard.keyboard_menu(), message=MESSAGE["menu_msg"],
                                              random_id=0)
