@@ -9,6 +9,8 @@ class Keyboard:
         keyboard.add_button(MESSAGE_KEYBOARD['start_keyb_kontroler'], color=VkKeyboardColor.PRIMARY)
         keyboard.add_line()
         keyboard.add_button(MESSAGE_KEYBOARD['start_keyb_settings'], color=VkKeyboardColor.PRIMARY)
+        keyboard.add_line()
+        keyboard.add_button(MESSAGE_KEYBOARD['start_keyb_info'], color=VkKeyboardColor.PRIMARY)
         return keyboard.get_keyboard()
 
     def keyboard_controllers(self):
