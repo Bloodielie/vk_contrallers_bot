@@ -5,7 +5,7 @@ password = ''
 token = ''
 BOT_GROUP_ID =
 
-db_name =
+db_name = ''
 user = 'postgres'
 host = 'localhost'
 password_db =
@@ -47,7 +47,8 @@ MESSAGE = {
     "settings_display_msg": 'Настройка отображения постов.',
     "settings_display_inside_msg": 'Теперь информация отображается {display}',
     "settings_time_msg": 'Настройка времени получения постов.',
-    "settings_time_inside_msg": 'Время отборки постов изменено на {final_time}'
+    "settings_time_inside_msg": 'Время отборки постов изменено на {final_time}',
+    'info_msg': 'Бот для отслеживать контроллеров в г.Бресте.\nПочти точно такой же бот в Vk:\nhttps://t.me/anticontrollersbot'
 }
 
 MESSAGE_KEYBOARD = {
@@ -55,6 +56,7 @@ MESSAGE_KEYBOARD = {
     'menu_keyb': 'Меню',
     'start_keyb_kontroler': 'Контроллеры',
     'start_keyb_settings': 'Настройки',
+    'start_keyb_info': 'Информация',
     'kontroler_keyb_clear_stop': 'Чистые остановки',
     'kontroler_keyb_dirty_stop': 'Грязные остановки',
     'kontroler_keyb_bus': 'Автобусы',
