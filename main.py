@@ -2,15 +2,13 @@
 # -*- coding: utf-8 -*-
 import vk_api
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
-from config import token, BOT_GROUP_ID, login, password, start_msg, wait_json_write
+from config import token, BOT_GROUP_ID, login, password, start_msg
 from keyboard import Keyboard
-from time import sleep
-from utils.write_data_json import write_dirty_post, write_clean_post
-import threading
 from database import User
 from scene_loader import Loader
 from config import MESSAGE, MESSAGE_KEYBOARD
 import logging
+from utils.api_getter import ApiGetter
 
 logging.basicConfig(filename="error.log", format='\n%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -24,6 +22,7 @@ vk.auth()
 
 load = Loader()
 keyboard = Keyboard()
+getter_data = ApiGetter('http://127.0.0.1:8000/bus_stop')
 
 
 def main_function():
@@ -63,23 +62,12 @@ def main_function():
                                              random_id=0)
 
                     scene = data.scens
-                    load.init_scene(scene, vk_bot, keyboard, MESSAGE, User).message_handler(event)
+                    load.init_scene(scene, vk_bot, keyboard, MESSAGE, User, getter_data).message_handler(event)
         except Exception as e:
             logging.error("Exception", exc_info=True)
             print(e)
             continue
 
 
-def write_in_json_file():
-    """ Запись данных во 2 файл """
-    while True:
-        write_dirty_post(vk)
-        write_clean_post(vk)
-        sleep(wait_json_write)
-
-
-my_thread_1 = threading.Thread(target=main_function)
-my_thread_2 = threading.Thread(target=write_in_json_file)
-
-my_thread_1.start()
-my_thread_2.start()
+if __name__ == '__main__':
+    main_function()
