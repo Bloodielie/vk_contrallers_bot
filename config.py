@@ -5,12 +5,10 @@ password = ''
 token = ''
 BOT_GROUP_ID =
 
-db_name = ''
+db_name = 'controller_base_vk'
 user = 'postgres'
 host = 'localhost'
-password_db =
-
-wait_json_write = 30
+password_db = 
 
 MEMBER_path = 'json/member.json'
 
@@ -21,9 +19,6 @@ DEFAULT_TABLE = 'png/таблица.png'
 DEFAULT_TABLE_BUS = 'png/таблицадляавтобуса.png'
 SAVE_DEFAULT_TABLE_BUS = 'png/tablebus.gif'
 SAVE_DEFAULT_TABLE_TROLLEYBUSES = 'png/tabletrolleybuses.png'
-
-JSON_BUS_STOP = "json/temporary_busstop.json"
-JSON_BUS_STOP_CLEAN = 'json/temporary_busstop_clean.json'
 
 JSON_BUS = 'json/busstop.json'
 JSON_TROLLEYBUSES = 'json/trolleybusesstop.json'
@@ -48,7 +43,7 @@ MESSAGE = {
     "settings_display_inside_msg": 'Теперь информация отображается {display}',
     "settings_time_msg": 'Настройка времени получения постов.',
     "settings_time_inside_msg": 'Время отборки постов изменено на {final_time}',
-    'info_msg': 'Бот для отслеживать контроллеров в г.Бресте.\nПочти точно такой же бот в Vk:\nhttps://t.me/anticontrollersbot'
+    'info_msg': 'Бот для отслеживать контроллеров в г.Бресте.\nПочти точно такой же бот в Telegram:\nhttps://t.me/anticontrollersbot'
 }
 
 MESSAGE_KEYBOARD = {
