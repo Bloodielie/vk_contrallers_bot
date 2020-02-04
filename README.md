@@ -1,6 +1,17 @@
-# vk_contrallers_bot
-Бот который показывает местнахождение контроллеров в г.Бресте.  
-Для нормальной работы бота необходим python 3.7.6  
-В проекте используется бд PostgreSQL  
-Все библиотеки указанны в requirements.txt  
-Настроить данные для коннекта бд, сообщения в чате, сообщения на кнопках можно в config.py  
+# It is undesirable to use this version. [nice version](https://github.com/Bloodielie/vk_contrallers_bot)
+**A bot that shows the location of the controllers in Brest(Belarus).**
+## Database
+
+ - PostgreSQL
+ 
+## Python version
+
+ - python 3.7.6
+ 
+## Libraries
+
+ - requirements.txt
+ 
+## Settings
+
+ - In config.py
