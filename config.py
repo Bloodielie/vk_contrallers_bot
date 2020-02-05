@@ -1,14 +1,14 @@
 from utils.json import JsonUtils
 
-login = ''
-password = ''
-token = ''
+login =
+password =
+token =
 BOT_GROUP_ID =
 
 db_name = 'controller_base_vk'
 user = 'postgres'
 host = 'localhost'
-password_db = 
+password_db =
 
 MEMBER_path = 'json/member.json'
 
@@ -43,6 +43,8 @@ MESSAGE = {
     "settings_display_inside_msg": 'Теперь информация отображается {display}',
     "settings_time_msg": 'Настройка времени получения постов.',
     "settings_time_inside_msg": 'Время отборки постов изменено на {final_time}',
+    "settings_city_msg": "Выберите город",
+    "settings_city_msg_f": "Теперь ваш город {city}",
     'info_msg': 'Бот для отслеживать контроллеров в г.Бресте.\nПочти точно такой же бот в Telegram:\nhttps://t.me/anticontrollersbot'
 }
 
@@ -65,9 +67,18 @@ MESSAGE_KEYBOARD = {
     'settings_keyb_display_inside_1': 'Фото',
     'settings_keyb_display_inside_2': 'Текст',
     'settings_keyb_sort': 'Сортировка',
+    'settings_keyb_city': 'Город',
     'settings_keyb_sort_inside_1': 'Время',
     'settings_keyb_sort_inside_2': 'Сообщения',
+    'settings_city': 'Город',
+    'settings_city_1': 'Брест',
+    'settings_city_2': 'Гомель',
+    'settings_city_3': 'Гродно',
 }
+
+alias_city = {MESSAGE_KEYBOARD['settings_city_1']: 'brest',
+              MESSAGE_KEYBOARD['settings_city_2']: 'gomel',
+              MESSAGE_KEYBOARD['settings_city_3']: 'grodno'}
 
 bus_number = ['1', '1А', '2', '2А', '3', '4', '5', '6', '7', '8', '9', '10', '11', '11А', '12', '12А', '13', '13А', '14', '15', '15А', '15Б', '16', '17', '18', '19', '20', '21', '21А', '21Б', '22', '23', '23А', '23Б', '24', '24А', '25', '26', '27', '27А', '28', '29', '30', '30А', '31', '32', '33', '34', '35', '36', '37', '37А', '38', '39', '39А', '39Б', '40', '41', '42', '43', '44', '44А', '45', '46', '47', '50']
 

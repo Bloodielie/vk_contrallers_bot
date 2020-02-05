@@ -166,6 +166,8 @@ class Keyboard:
         keyboard = VkKeyboard()
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_time'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_sort'], color=VkKeyboardColor.DEFAULT)
+        keyboard.add_line()
+        keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_city'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_display'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_line()
         keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
@@ -189,7 +191,7 @@ class Keyboard:
         keyboard.add_button('5 часа 30 мин', color=VkKeyboardColor.DEFAULT)
         keyboard.add_button('6 часа', color=VkKeyboardColor.DEFAULT)
         keyboard.add_line()
-        keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
+        keyboard.add_button(MESSAGE_KEYBOARD['back_keyb'], color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
         return keyboard.get_keyboard()
 
@@ -198,7 +200,7 @@ class Keyboard:
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_sort_inside_1'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_sort_inside_2'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_line()
-        keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
+        keyboard.add_button(MESSAGE_KEYBOARD['back_keyb'], color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
         return keyboard.get_keyboard()
 
@@ -207,6 +209,16 @@ class Keyboard:
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_display_inside_1'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_button(MESSAGE_KEYBOARD['settings_keyb_display_inside_2'], color=VkKeyboardColor.DEFAULT)
         keyboard.add_line()
+        keyboard.add_button(MESSAGE_KEYBOARD['back_keyb'], color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
+        return keyboard.get_keyboard()
+
+    def keyboard_city(self):
+        keyboard = VkKeyboard()
+        keyboard.add_button(MESSAGE_KEYBOARD['settings_city_1'], color=VkKeyboardColor.DEFAULT)
+        keyboard.add_button(MESSAGE_KEYBOARD['settings_city_2'], color=VkKeyboardColor.DEFAULT)
+        keyboard.add_button(MESSAGE_KEYBOARD['settings_city_3'], color=VkKeyboardColor.DEFAULT)
+        keyboard.add_line()
+        keyboard.add_button(MESSAGE_KEYBOARD['back_keyb'], color=VkKeyboardColor.PRIMARY)
         keyboard.add_button(MESSAGE_KEYBOARD['menu_keyb'], color=VkKeyboardColor.PRIMARY)
         return keyboard.get_keyboard()

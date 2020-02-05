@@ -9,9 +9,9 @@ from scene_loader import Loader
 from config import MESSAGE, MESSAGE_KEYBOARD
 import logging
 from utils.api_getter import ApiGetter
+import traceback
 
 logging.basicConfig(filename="error.log", format='\n%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
 
 vk_session = vk_api.VkApi(token=token)
 longpoll = VkBotLongPoll(vk_session, BOT_GROUP_ID)
@@ -66,6 +66,7 @@ def main_function():
         except Exception as e:
             logging.error("Exception", exc_info=True)
             print(e)
+            print(traceback.format_exc())
             continue
 
 
